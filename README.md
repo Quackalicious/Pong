@@ -1,11 +1,11 @@
-	#In my pong game there is a problem where the paddles can phase through walls. The multiline comment at the end is what i tried but didn't work so if you can fix it then please comment the solution.
-import turtle
-import time
+In my pong game there is a problem where the paddles can phase through walls. The multiline comment at the end is what i tried but didn't work so if you can fix it then please comment the solution.
+	import turtle
+	import time
 
-wnd = turtle.Screen()
-wnd.title("Pong")
-wnd.bgcolor("black")
-wnd.setup(width=800, height=600)
+	wnd = turtle.Screen()
+	wnd.title("Pong")
+	wnd.bgcolor("black")
+	wnd.setup(width=800, height=600)
 wnd.tracer(0)
 
 scoreA = 0
