@@ -75,37 +75,37 @@ In my pong game there is a problem where the paddles can phase through walls. Th
 	time.sleep(5)
 
 	while True:
-			wnd.update()
-			Ball.setx(Ball.xcor() + Ball.dx)
-			Ball.sety(Ball.ycor() + Ball.dy)
+		wnd.update()
+		Ball.setx(Ball.xcor() + Ball.dx)
+		Ball.sety(Ball.ycor() + Ball.dy)
 
-			if Ball.ycor() > 290:
-					Ball.sety(290)
-					Ball.dy *= -1
+		if Ball.ycor() > 290:
+				Ball.sety(290)
+				Ball.dy *= -1
 
-			elif Ball.ycor() < -290:
-					Ball.sety(-290)
-					Ball.dy *= -1
+		elif Ball.ycor() < -290:
+				Ball.sety(-290)
+				Ball.dy *= -1
 
-			if Ball.xcor() > 350:
-					scoreA += 1
-					Pen.clear()
-					Pen.write("Player A: {}  Player B: {}".format(scoreA, scoreB), align="center", font=("Courier", 24, "normal"))
-					Ball.goto(0, 0)
-					Ball.dx *= -1
+		if Ball.xcor() > 350:
+				scoreA += 1
+				Pen.clear()
+				Pen.write("Player A: {}  Player B: {}".format(scoreA, scoreB), align="center", font=("Courier", 24, "normal"))
+				Ball.goto(0, 0)
+				Ball.dx *= -1
 
-			elif Ball.xcor() < -350:
-					scoreB += 1
-					Pen.clear()
-					Pen.write("Player A: {}  Player B: {}".format(scoreA, scoreB), align="center", font=("Courier", 24, "normal"))
-					Ball.goto(0, 0)
-					Ball.dx *= -1
+		elif Ball.xcor() < -350:
+				scoreB += 1
+				Pen.clear()
+				Pen.write("Player A: {}  Player B: {}".format(scoreA, scoreB), align="center", font=("Courier", 24, "normal"))
+				Ball.goto(0, 0)
+				Ball.dx *= -1
 
-			if Ball.xcor() < -340 and Ball.ycor() < paddleA.ycor() + 50 and Ball.ycor() > paddleA.ycor() - 50:
-					Ball.dx *= -1 
+		if Ball.xcor() < -340 and Ball.ycor() < paddleA.ycor() + 50 and Ball.ycor() > paddleA.ycor() - 50:
+				Ball.dx *= -1 
     
-			elif Ball.xcor() > 340 and Ball.ycor() < paddleB.ycor() + 50 and Ball.ycor() > paddleB.ycor() - 50:
-					Ball.dx *= -1
+		elif Ball.xcor() > 340 and Ball.ycor() < paddleB.ycor() + 50 and Ball.ycor() > paddleB.ycor() - 50:
+				Ball.dx *= -1
 		"""
 		if paddleA.ycor() > 400:
 				paddleA.goto(-350,400)
